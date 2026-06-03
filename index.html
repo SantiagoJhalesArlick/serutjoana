@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joana B. Serut | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+     <link rel="icon" type="image/ico" href="pic.jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons for clean UI elements -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#090d16',
+                        cardBg: 'rgba(16, 24, 48, 0.45)',
+                        emeraldCustom: '#10b981',
+                        mintCustom: '#34d399',
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .glassmorphism {
+            background: rgba(15, 23, 42, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.2);
+            border-color: rgba(52, 211, 153, 0.4);
+        }
+        /* Prevents body scroll when modals are active */
+        .modal-open {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-200 antialiased selection:bg-emeraldCustom/30 selection:text-emeraldCustom relative min-h-screen">
+
+    <!-- ================= NAV BAR (Simplest, Static, Disappears on Scroll) ================= -->
+    <header class="absolute top-0 left-0 w-full z-40 border-b border-slate-900 bg-darkBg/50 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Left Side: Clean Professional Identity + Socials to Maximise Space -->
+            <div class="flex items-center gap-4 sm:gap-6">
+                <span class="text-xs font-bold tracking-widest text-white uppercase whitespace-nowrap">
+                    Joana B. Serut <span class="text-slate-600 mx-2">//</span> <span class="text-emeraldCustom font-medium">Mathematics Education</span>
+                </span>
+                <div class="hidden sm:block w-px h-4 bg-slate-800"></div>
+                <div class="flex items-center gap-3">
+                    <a href="https://www.facebook.com/joana.serut.5" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-emeraldCustom transition-colors" title="Facebook">
+                        <i data-lucide="facebook" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-emeraldCustom transition-colors" title="Instagram">
+                        <i data-lucide="instagram" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Right Side: Standard Plain Menu Elements -->
+            <div class="flex items-center gap-6 text-xs font-medium tracking-wider uppercase">
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#about" class="hover:text-emeraldCustom transition-colors duration-200">About</a>
+                    <a href="#experience" class="hover:text-emeraldCustom transition-colors duration-200">Experience</a>
+                    <a href="#leadership" class="hover:text-emeraldCustom transition-colors duration-200">Leadership</a>
+                    <a href="#skills" class="hover:text-emeraldCustom transition-colors duration-200">Competencies</a>
+                </div>
+                <a href="#contact" class="hover:text-emeraldCustom text-slate-300 font-semibold transition-colors duration-200">
+                    Connect
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative min-h-screen flex items-center justify-center pt-28 overflow-hidden px-4">
+        <!-- Subtle Ambient Background Glows -->
+        <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-emeraldCustom/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-96 h-96 bg-mintCustom/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <!-- Left Text Content -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emeraldCustom/10 border border-emeraldCustom/20 text-emeraldCustom text-xs font-medium tracking-wide">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emeraldCustom"></span>
+                    Open for Professional Educational Opportunities
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+                    Joana B. Serut
+                </h1>
+                <p class="text-lg sm:text-xl font-medium text-slate-400">
+                    Educator & <span class="text-transparent bg-clip-text bg-gradient-to-r from-emeraldCustom to-mintCustom">Bachelor of Secondary Education Major in Mathematics</span>
+                </p>
+                <div class="inline-block bg-gradient-to-r from-amber-500/10 to-yellow-500/10 border border-amber-500/30 px-4 py-1.5 rounded-md text-amber-400 text-sm font-semibold tracking-wide">
+                    ✨ Graduated Cum Laude
+                </div>
+                <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    Bridging the gap between complex mathematical frameworks and intuitive learning. An active student leader dedicated to fostering critical thinking, analytical excellence, and empathy in the modern classroom.
+                </p>
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#about" class="px-6 py-3 rounded-lg bg-emeraldCustom text-slate-900 font-semibold text-sm transition-all duration-300 hover:opacity-90 shadow-lg shadow-emeraldCustom/20">
+                        View Profile
+                    </a>
+                    <a href="#contact" class="px-6 py-3 rounded-lg border border-slate-700 hover:border-slate-500 text-sm font-medium transition-all duration-300">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Image Container (Uses pic.png) -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-emeraldCustom to-mintCustom opacity-30 blur group-hover:opacity-40 transition duration-500"></div>
+                    <div class="relative w-72 h-96 sm:w-80 sm:h-[420px] rounded-2xl overflow-hidden bg-slate-900 border border-slate-800">
+                        <img src="pic.jpg" alt="Joana B. Serut" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="border-slate-900 max-w-6xl mx-auto">
+
+    <!-- ================= ABOUT & PERSONAL DETAILS ================= -->
+    <section id="about" class="py-24 px-4 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div>
+                <p class="text-xs uppercase tracking-widest text-emeraldCustom font-semibold mb-2">01 // Identity</p>
+                <h2 class="text-3xl font-bold text-white tracking-tight">Personal Profile</h2>
+                <p class="text-slate-400 mt-4 text-sm leading-relaxed">
+                    Rooted in foundational values and driven by academic rigor at the Franciscan College of the Immaculate Conception.
+                </p>
+            </div>
+            <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="glassmorphism p-6 rounded-xl">
+                    <span class="text-slate-500 text-xs uppercase tracking-wider block mb-1">Birthdate & Age</span>
+                    <span class="text-white font-medium text-base">February 09, 2004 — 21 Years Old</span>
+                </div>
+                <div class="glassmorphism p-6 rounded-xl">
+                    <span class="text-slate-500 text-xs uppercase tracking-wider block mb-1">Place of Birth</span>
+                    <span class="text-white font-medium text-base">Hindang, Leyte</span>
+                </div>
+                <div class="glassmorphism p-6 rounded-xl">
+                    <span class="text-slate-500 text-xs uppercase tracking-wider block mb-1">Nationality & Status</span>
+                    <span class="text-white font-medium text-base">Filipino — Single</span>
+                </div>
+                <div class="glassmorphism p-6 rounded-xl">
+                    <span class="text-slate-500 text-xs uppercase tracking-wider block mb-1">Affiliation</span>
+                    <span class="text-white font-medium text-base">Roman Catholic</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= EDUCATION TIMELINE ================= -->
+    <section id="education" class="py-20 bg-slate-950/40 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <p class="text-xs uppercase tracking-widest text-emeraldCustom font-semibold mb-2">02 // Journey</p>
+                <h2 class="text-3xl font-bold text-white tracking-tight">Academic Foundation</h2>
+            </div>
+            
+            <div class="relative border-l border-slate-800 ml-4 md:ml-32 space-y-12">
+                <!-- FCIC -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emeraldCustom border-4 border-darkBg transition-transform duration-300 group-hover:scale-125"></div>
+                    <span class="text-xs font-semibold text-emeraldCustom bg-emeraldCustom/10 px-2 py-0.5 rounded-md">2022 — Present</span>
+                    <h3 class="text-lg font-bold text-white mt-2">Franciscan College of the Immaculate Conception</h3>
+                    <p class="text-slate-400 text-sm">Bachelor of Secondary Education Major in Mathematics</p>
+                    <p class="text-slate-500 text-xs mt-1">Graduated — Cum Laude</p>
+                </div>
+                <!-- High School Secondary -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-darkBg group-hover:bg-emeraldCustom/60 transition-all"></div>
+                    <span class="text-xs font-medium text-slate-500">2020 — 2022</span>
+                    <h3 class="text-base font-semibold text-slate-300 mt-2">Bontoc National High School</h3>
+                    <p class="text-slate-500 text-sm">Senior High School Curriculum</p>
+                </div>
+                <!-- High School Junior -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-darkBg group-hover:bg-emeraldCustom/60 transition-all"></div>
+                    <span class="text-xs font-medium text-slate-500">2016 — 2020</span>
+                    <h3 class="text-base font-semibold text-slate-300 mt-2">Bontoc National High School</h3>
+                    <p class="text-slate-500 text-sm">Junior High School Curriculum</p>
+                </div>
+                <!-- Elementary -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-darkBg group-hover:bg-emeraldCustom/60 transition-all"></div>
+                    <span class="text-xs font-medium text-slate-500">2010 — 2016</span>
+                    <h3 class="text-base font-semibold text-slate-300 mt-2">Himacugo Elementary School</h3>
+                    <p class="text-slate-500 text-sm">Primary Education</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= EXPERIENCE & LEADERSHIP ================= -->
+    <section id="experience" class="py-24 px-4 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <!-- Work Experience -->
+        <div class="lg:col-span-5 space-y-6">
+            <div>
+                <p class="text-xs uppercase tracking-widest text-emeraldCustom font-semibold mb-2">03 // Professionalism</p>
+                <h2 class="text-3xl font-bold text-white tracking-tight">Work Experience</h2>
+            </div>
+            <div class="glassmorphism p-6 rounded-xl border-l-4 border-l-emeraldCustom space-y-4">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Sales Staff</h3>
+                        <p class="text-sm text-emeraldCustom">NilJet Store</p>
+                    </div>
+                    <span class="text-xs text-slate-400 bg-slate-900 px-2 py-1 rounded">2017 – 2023</span>
+                </div>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                    Assisted seasonal operations every summer (April to May). Managed inventory, customer transactions, and communications, honing consistency and accountability outside the academic space.
+                </p>
+                <div class="pt-2 text-[11px] text-slate-500 border-t border-slate-800/60">
+                    <span class="block">Owner: Nilo & Zenaida Tampos</span>
+                    <span class="block">Location: Brgy. Poblacion 2 Public Market Hindang, Leyte</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leadership / Extracurriculars -->
+        <div id="leadership" class="lg:col-span-7 space-y-6">
+            <div>
+                <p class="text-xs uppercase tracking-widest text-emeraldCustom font-semibold mb-2">04 // Influence</p>
+                <h2 class="text-3xl font-bold text-white tracking-tight">Extracurricular Leadership</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="glassmorphism p-5 rounded-xl glow-effect transition-all duration-300">
+                    <span class="text-[10px] uppercase font-bold tracking-wider text-emeraldCustom">A.Y. 2024-2025</span>
+                    <h4 class="text-sm font-semibold text-white mt-1">FCIC College Student Body Organization</h4>
+                    <p class="text-xs text-slate-400 mt-1">President</p>
+                </div>
+                <div class="glassmorphism p-5 rounded-xl glow-effect transition-all duration-300">
+                    <span class="text-[10px] uppercase font-bold tracking-wider text-emeraldCustom">A.Y. 2024-2025</span>
+                    <h4 class="text-sm font-semibold text-white mt-1">FCIC Reach Out Publication</h4>
+                    <p class="text-xs text-slate-400 mt-1">Literary Editor</p>
+                </div>
+                <div class="glassmorphism p-5 rounded-xl glow-effect transition-all duration-300">
+                    <span class="text-[10px] uppercase font-bold tracking-wider text-emeraldCustom">A.Y. 2023-2024</span>
+                    <h4 class="text-sm font-semibold text-white mt-1">FCIC Math Club</h4>
+                    <p class="text-xs text-slate-400 mt-1">President</p>
+                </div>
+                <div class="glassmorphism p-5 rounded-xl glow-effect transition-all duration-300">
+                    <span class="text-[10px] uppercase font-bold tracking-wider text-emeraldCustom">A.Y. 2023-2024</span>
+                    <h4 class="text-sm font-semibold text-white mt-1">FCIC Reach Out Publication</h4>
+                    <p class="text-xs text-slate-400 mt-1">Managing Editor</p>
+                </div>
+                <div class="glassmorphism p-5 rounded-xl glow-effect transition-all duration-300">
+                    <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400">A.Y. 2023-2024</span>
+                    <h4 class="text-sm font-semibold text-white mt-1">FCIC Performing Arts Company</h4>
+                    <p class="text-xs text-slate-400 mt-1">Secretary-External</p>
+                </div>
+                <div class="glassmorphism p-5 rounded-xl glow-effect transition-all duration-300">
+                    <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400">A.Y. 2020-2021</span>
+                    <h4 class="text-sm font-semibold text-white mt-1">Bontoc NHS Supreme Student Gov.</h4>
+                    <p class="text-xs text-slate-400 mt-1">President</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SKILLS SECTION ================= -->
+    <section id="skills" class="py-20 bg-slate-950/40 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12">
+                <p class="text-xs uppercase tracking-widest text-emeraldCustom font-semibold mb-2">05 // Capabilities</p>
+                <h2 class="text-3xl font-bold text-white tracking-tight">Core Competencies</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="p-6 bg-slate-900/60 rounded-xl border border-slate-800 flex flex-col justify-between h-32 hover:border-slate-700 transition-all duration-300">
+                    <i data-lucide="binary" class="text-emeraldCustom w-6 h-6"></i>
+                    <span class="text-sm font-medium text-white block mt-4">Mathematical Problem-Solving</span>
+                </div>
+                <div class="p-6 bg-slate-900/60 rounded-xl border border-slate-800 flex flex-col justify-between h-32 hover:border-slate-700 transition-all duration-300">
+                    <i data-lucide="messages-square" class="text-emeraldCustom w-6 h-6"></i>
+                    <span class="text-sm font-medium text-white block mt-4">Communication Skills</span>
+                </div>
+                <div class="p-6 bg-slate-900/60 rounded-xl border border-slate-800 flex flex-col justify-between h-32 hover:border-slate-700 transition-all duration-300">
+                    <i data-lucide="sparkles" class="text-emeraldCustom w-6 h-6"></i>
+                    <span class="text-sm font-medium text-white block mt-4">Adaptability Skills</span>
+                </div>
+                <div class="p-6 bg-slate-900/60 rounded-xl border border-slate-800 flex flex-col justify-between h-32 hover:border-slate-700 transition-all duration-300">
+                    <i data-lucide="users" class="text-emeraldCustom w-6 h-6"></i>
+                    <span class="text-sm font-medium text-white block mt-4">Leadership & Team Management</span>
+                </div>
+                <div class="p-6 bg-slate-900/60 rounded-xl border border-slate-800 flex flex-col justify-between h-32 hover:border-slate-700 transition-all duration-300">
+                    <i data-lucide="mic" class="text-emeraldCustom w-6 h-6"></i>
+                    <span class="text-sm font-medium text-white block mt-4">Public Speaking Skills</span>
+                </div>
+                <div class="p-6 bg-slate-900/60 rounded-xl border border-slate-800 flex flex-col justify-between h-32 hover:border-slate-700 transition-all duration-300">
+                    <i data-lucide="calendar-range" class="text-emeraldCustom w-6 h-6"></i>
+                    <span class="text-sm font-medium text-white block mt-4">Event Planning & Coordination</span>
+                </div>
+                <div class="p-6 bg-slate-900/60 rounded-xl border border-slate-800 flex flex-col justify-between h-32 hover:border-slate-700 transition-all duration-300">
+                    <i data-lucide="shield-check" class="text-emeraldCustom w-6 h-6"></i>
+                    <span class="text-sm font-medium text-white block mt-4">Initiative & Responsibility</span>
+                </div>
+                <div class="p-6 bg-slate-900/60 rounded-xl border border-slate-800 flex flex-col justify-between h-32 hover:border-slate-700 transition-all duration-300">
+                    <i data-lucide="heart-handshake" class="text-emeraldCustom w-6 h-6"></i>
+                    <span class="text-sm font-medium text-white block mt-4">Service-Oriented Mindset</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION / FOOTER (Styled from image_d959fc.png) ================= -->
+    <footer id="contact" class="relative bg-slate-950 border-t border-slate-900 pt-20 pb-12 px-4 overflow-hidden">
+        <div class="absolute top-0 right-1/4 w-72 h-72 bg-emeraldCustom/5 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16">
+                <!-- Layout matching reference image_d959fc.png with inline vector icons -->
+                <div class="lg:col-span-5 space-y-6">
+                    <h3 class="text-2xl font-bold tracking-tight text-white">Let's shape the future of mathematics education together.</h3>
+                    <p class="text-slate-400 text-sm max-w-sm leading-relaxed">
+                        Open for collaborative academic research, speaking engagements, and instructional design opportunities.
+                    </p>
+                    
+                    <!-- Clean Icon+Text Architecture inspired by image_d959fc.png -->
+                    <div class="flex items-center gap-6 pt-2">
+                        <a href="https://www.facebook.com/joana.serut.5" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-400 hover:text-emeraldCustom transition-colors group">
+                            <i data-lucide="facebook" class="w-4 h-4 text-emeraldCustom/80 group-hover:text-emeraldCustom"></i> FACEBOOK
+                        </a>
+                        <span class="text-slate-800">|</span>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-400 hover:text-emeraldCustom transition-colors group">
+                            <i data-lucide="instagram" class="w-4 h-4 text-emeraldCustom/80 group-hover:text-emeraldCustom"></i> INSTAGRAM
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Strategic Contact Details Grid -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <a href="mailto:C22-0047-1@fcic.edu.ph" class="p-5 rounded-xl bg-slate-900/40 border border-slate-800/80 flex items-start gap-4 hover:border-emeraldCustom/40 transition-all group">
+                        <div class="p-3 rounded-lg bg-emeraldCustom/10 text-emeraldCustom">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider text-slate-500 block">Official Institution Email</span>
+                            <span class="text-sm font-medium text-slate-200 group-hover:text-emeraldCustom transition-colors break-all">C22-0047-1@fcic.edu.ph</span>
+                        </div>
+                    </a>
+
+                    <a href="tel:09124980453" class="p-5 rounded-xl bg-slate-900/40 border border-slate-800/80 flex items-start gap-4 hover:border-emeraldCustom/40 transition-all group">
+                        <div class="p-3 rounded-lg bg-emeraldCustom/10 text-emeraldCustom">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider text-slate-500 block">Mobile Contact</span>
+                            <span class="text-sm font-medium text-slate-200 group-hover:text-emeraldCustom transition-colors">09124980453</span>
+                        </div>
+                    </a>
+
+                    <div class="p-5 rounded-xl bg-slate-900/40 border border-slate-800/80 flex items-start gap-4 sm:col-span-2">
+                        <div class="p-3 rounded-lg bg-emeraldCustom/10 text-emeraldCustom">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </div>
+                        <div class="w-full">
+                            <span class="text-[11px] uppercase tracking-wider text-slate-500 block">Messenger Platform</span>
+                            <div class="flex justify-between items-center mt-1">
+                                <span class="text-sm font-medium text-slate-200">Joana Serut</span>
+                                <a href="https://www.facebook.com/joana.serut.5" target="_blank" rel="noopener noreferrer" class="text-[10px] text-emeraldCustom bg-emeraldCustom/10 px-2 py-0.5 rounded border border-emeraldCustom/20 hover:bg-emeraldCustom hover:text-slate-900 transition-all">Direct Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deep Footer Base Line -->
+            <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600">
+                <p>© 2026 Joana B. Serut. All rights preserved.</p>
+                <div class="flex gap-6">
+                    <button onclick="openModal('privacy-modal')" class="hover:text-slate-400 transition-colors focus:outline-none">Privacy Principles</button>
+                    <button onclick="openModal('terms-modal')" class="hover:text-slate-400 transition-colors focus:outline-none">Terms of Use</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= MODAL INFRASTRUCTURE (For Showcase Purposes) ================= -->
+    
+    <!-- Privacy Principles Modal -->
+    <div id="privacy-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        <div class="glassmorphism max-w-lg w-full p-6 sm:p-8 rounded-2xl relative shadow-2xl transform scale-95 transition-transform duration-300">
+            <button onclick="closeModal('privacy-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div class="flex items-center gap-3 mb-4">
+                <div class="p-2 rounded-lg bg-emeraldCustom/10 text-emeraldCustom">
+                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white">Privacy Principles</h4>
+            </div>
+            <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
+                <p class="text-xs text-emeraldCustom font-semibold uppercase tracking-wider">Portfolio Context Notice</p>
+                <p>
+                    This website serves strictly as an architectural design portfolio showcase. No personal user data tracking modules, behavioral analytics scripts, or cookie trackers are deployed on this landing experience.
+                </p>
+                <p>
+                    Any communication details provided here (such as official email and mobile points) are shared explicitly for direct, professional connectivity and peer evaluation. Your correspondence is handled with utmost discretion and respect.
+                </p>
+            </div>
+            <div class="mt-6 text-right">
+                <button onclick="closeModal('privacy-modal')" class="px-5 py-2 bg-slate-900 hover:bg-slate-800 text-slate-200 rounded-lg text-xs font-semibold transition-colors border border-slate-800">
+                    Acknowledge
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Use Modal -->
+    <div id="terms-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        <div class="glassmorphism max-w-lg w-full p-6 sm:p-8 rounded-2xl relative shadow-2xl transform scale-95 transition-transform duration-300">
+            <button onclick="closeModal('terms-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div class="flex items-center gap-3 mb-4">
+                <div class="p-2 rounded-lg bg-emeraldCustom/10 text-emeraldCustom">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white">Terms of Use</h4>
+            </div>
+            <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
+                <p class="text-xs text-emeraldCustom font-semibold uppercase tracking-wider">Intellectual Property & Intent</p>
+                <p>
+                    Welcome to this dynamic portfolio interface. All conceptual designs, layout structures, and personal achievement history presented here represent verified milestones from academic and community leadership journeys.
+                </p>
+                <p>
+                    You are welcome to explore this space to analyze creative UI layout formats or evaluate instructional proficiencies. Unauthorized cloning of structural frameworks for malicious misrepresentation is strictly discouraged.
+                </p>
+            </div>
+            <div class="mt-6 text-right">
+                <button onclick="closeModal('terms-modal')" class="px-5 py-2 bg-slate-900 hover:bg-slate-800 text-slate-200 rounded-lg text-xs font-semibold transition-colors border border-slate-800">
+                    Accept
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script to Initialize Lucide Icons and Handle Modal Mechanics -->
+    <script>
+        // Init vector shapes
+        lucide.createIcons();
+
+        // Modal triggers
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            document.body.classList.add('modal-open');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.querySelector('div').classList.remove('scale-95');
+            }, 10);
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('opacity-0');
+            modal.querySelector('div').classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.classList.remove('modal-open');
+            }, 300);
+        }
+
+        // Close on clicking overlay outside the content block
+        window.onclick = function(event) {
+            if (event.target.id === 'privacy-modal') closeModal('privacy-modal');
+            if (event.target.id === 'terms-modal') closeModal('terms-modal');
+        }
+    </script>
+</body>
+</html>
